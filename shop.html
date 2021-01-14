@@ -1,0 +1,1082 @@
+<html>
+  <head>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome to Arya Store!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+      <div class="container">
+        <h3><i class="fas fa-store-alt text-success mr-2"></i></h3>
+        <a class="navbar-brand font-weight-bold" href="#">ARYA STORE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-4">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Daftar <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Masuk <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Pesanan Saya <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Bantuan <span class="sr-only">(current)</span></a
+              >
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="icon mt-2">
+            <h5>
+              <i class="fas fa-cart-plus ml-3"
+              data-toggle="tooltip"
+              title="Keranjang Belanja"></i>
+              <span class='badge badge-warning' id='CartCount'> 5 </span>
+              <i
+                class="fas fa-envelope mr-2"
+                data-toggle="tooltip"
+                title="Kotak Masuk"
+              ></i>
+              <i
+                class="fas fa-bell mr-3"
+                data-toggle="tooltip"
+                title="Notifikasi"
+              ></i>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row mt-5 no-gutters">
+      <div class="col-md-2 bg-light">
+        <ul class="list-group list-group-flush p-2 pt-4">
+          <li class="list-group-item bg-warning">
+            <i class="fas fa-list"></i> KATEGORI PRODUK
+          </li>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-tshirt"></i> Fashion</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-tablet"></i> Phone & Tablet</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-laptop-code"></i> Computer & Office</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-camera"></i> Kamera & Audio</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-football-ball"></i> Sport & Lifestyle</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-gamepad"></i> Mainan & Gaming</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-tv"></i> Elektronik</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-crown"></i> Beauty</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-tachometer-alt"></i> Otomotif</a>
+        </ul>
+      </div>
+
+      <!-- <script> 
+        $(".list-group-item-action a").on("click", function(){
+           $(".list-group-item-action a").removeClass("active");
+           $(this).addClass("active");
+      });
+      </script> -->
+
+      <div class="col-md-10">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/slide/slide1.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/slide/slide2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/slide/slide3.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/slide/slide4.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <h4 class="text-center font-weight-bold m-4">PRODUK TERBARU</h4>
+        <div class="row mx-auto">
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img
+              src="img/produk/tablet.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">APPLE iPad Air 4</h5>
+              <p class="card-text">iPad Air 4 hadir dengan layar berukuran 10.9 inch dan serangkaian fitur menarik.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk1"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 10.549.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/laptop.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">LENOVO Legion 5i</h5>
+              <p class="card-text">Lenovo Legion Gaming didesain untuk pengalaman gaming yang lebih efisien.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star-half-alt text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk2"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 19.499.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/kamera.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">CANON EOS 1100D</h5>
+              <p class="card-text">Kamera Canon EOS 1100D dilengkapi fitur untuk mengambil foto yang tajam.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star-half-alt text-success"></i>
+              <i class="far fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk3"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 3.827.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/ps.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">SONY Playstation 4</h5>
+              <p class="card-text">Playstation 4 untuk pengalaman bermain game console yang memukau.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="far fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk4"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 4.499.000</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-auto mt-5">
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/jacket.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Jaket H&M</h5>
+              <p class="card-text">Jaket Kulit dengan bahan yang nyaman untuk dipakai kegiatan sehari-hari.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star-half-alt text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk5"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 175.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/usb.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">USB Lightning</h5>
+              <p class="card-text">Kabel USB yang awet tahan lama dan memiliki fitur untuk fast charging.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star-half-alt text-success"></i>
+              <i class="far fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk6"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 50.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/ssd.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">SSD Samsung</h5>
+              <p class="card-text">SSD super kencang untuk kebutuhan komputasi yang handal dan memadai.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk7"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 450.000</a>
+            </div>
+          </div>
+
+          <div class="card mr-4 ml-2" style="width: 16rem">
+            <img src="img/produk/tonner.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-light">
+              <h5 class="card-title">AVOSKIN Toner</h5>
+              <p class="card-text">Bermanfaat mengangkat sel kulit mati dengan formula lembut di kulit.</p>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="far fa-star text-success"></i><br />
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-target="#produk8"
+                data-toggle="modal"
+                >Detail</a>
+              <a class="btn btn-danger">Rp. 84.550</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="modal fade"
+        id="produk1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Detail Produk
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/produk/tablet.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src='img/produk/tablet2.jpg' class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-borderless">
+                    <tr>
+                      <th>Nama Produk</th>
+                      <td>APPLE iPad Air 4</td>
+                    </tr>
+                    <tr>
+                      <th>Merk/Type</th>
+                      <td>Apple/4 10.9 inch 2020 64GB WIFI Only - Space Gray
+        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Biaya Ongkir</th>
+                      <td>Gratis</td>
+                    </tr>
+                    <tr>
+                      <th>Rating Produk</th>
+                      <td>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i><br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Stock Produk</th>
+                      <td>10 Pcs</td>
+                    </tr>
+                    <tr>
+                      <th>Harga</th>
+                      <td>Rp. 10.549.000</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+              >
+                KEMBALI
+              </button>
+              <button type="button" class="btn btn-primary">BELI</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="btn-toolbar m-4" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2 btn-group-sm" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary"><<</button>
+            <button type="button" class="btn btn-outline-dark"><</button>
+          </div>
+          <div class="btn-group mr-2 btn-group-sm" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-outline-dark">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-outline-dark">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+            <button type="button" class="btn btn-outline-dark">...</button>
+          </div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-outline-dark">></button>
+            <button type="button" class="btn btn-secondary">>></button>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+        <div
+        class="modal fade"
+        id="produk2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Detail Produk
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="img/produk/laptop.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/produk/laptop2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/produk/laptop3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/produk/laptop4.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-borderless">
+                    <tr>
+                      <th>Nama Produk</th>
+                      <td>LENOVO Legion 5i</td>
+                    </tr>
+                    <tr>
+                      <th>Merk/Type</th>
+                      <td>Lenovo/15IMH05-K9ID 15.6" FHD/Intel Core i7-10750H/16GB/512GB SSD/NVIDIA GeForce GTX 1650Ti 4GB/Win10 Home+Office 2019 - Phantom Black
+        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Biaya Ongkir</th>
+                      <td>Gratis</td>
+                    </tr>
+                    <tr>
+                      <th>Rating Produk</th>
+                      <td>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star-half-alt text-success"></i><br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Stock Produk</th>
+                      <td>7 Pcs</td>
+                    </tr>
+                    <tr>
+                      <th>Harga</th>
+                      <td>Rp. 19.499.000</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+              >
+                KEMBALI
+              </button>
+              <button type="button" class="btn btn-primary">BELI</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        <div
+        class="modal fade"
+        id="produk3"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Detail Produk
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="img/produk/kamera.jpg" />
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-borderless">
+                    <tr>
+                      <th>Nama Produk</th>
+                      <td>CANON EOS 1100D</td>
+                    </tr>
+                    <tr>
+                      <th>Merk/Type</th>
+                      <td>Canon/Kamera CANON EOS 1100D + Lensa Kit 18-55mm IS Wifi
+        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Biaya Ongkir</th>
+                      <td>Gratis</td>
+                    </tr>
+                    <tr>
+                      <th>Rating Produk</th>
+                      <td>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star-half-alt text-success"></i>
+                        <i class="far fa-star text-success"></i><br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Stock Produk</th>
+                      <td>5 Pcs</td>
+                    </tr>
+                    <tr>
+                      <th>Harga</th>
+                      <td>Rp. 3.827.000</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+              >
+                KEMBALI
+              </button>
+              <button type="button" class="btn btn-primary">BELI</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        
+        <div
+        class="modal fade"
+        id="produk4"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Detail Produk
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="img/produk/ps.jpg" />
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-borderless">
+                    <tr>
+                      <th>Nama Produk</th>
+                      <td>SONY Playstation 4</td>
+                    </tr>
+                    <tr>
+                      <th>Merk/Type</th>
+                      <td>Sony/Slim 1TB with 2 Dualshock - Jet Black CUH 2218B - Reg 3 Asia
+        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Biaya Ongkir</th>
+                      <td>Gratis</td>
+                    </tr>
+                    <tr>
+                      <th>Rating Produk</th>
+                      <td>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="fas fa-star text-success"></i>
+                        <i class="far fa-star text-success"></i><br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Stock Produk</th>
+                      <td>6 Pcs</td>
+                    </tr>
+                    <tr>
+                      <th>Harga</th>
+                      <td>Rp. 4.499.000</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal"
+              >
+                KEMBALI
+              </button>
+              <button type="button" class="btn btn-primary">BELI</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+
+    <div
+    class="modal fade"
+    id="produk5"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Detail Produk
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/produk/jacket.jpg" />
+            </div>
+            <div class="col-md-6">
+              <table class="table table-borderless">
+                <tr>
+                  <th>Nama Produk</th>
+                  <td>Jaket H&M</td>
+                </tr>
+                <tr>
+                  <th>Merk/Type</th>
+                  <td>H&M/Ukuran XL
+    
+                  </td>
+                </tr>
+                <tr>
+                  <th>Biaya Ongkir</th>
+                  <td>Gratis</td>
+                </tr>
+                <tr>
+                  <th>Rating Produk</th>
+                  <td>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star-half-alt text-success"></i><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Stock Produk</th>
+                  <td>40 Pcs</td>
+                </tr>
+                <tr>
+                  <th>Harga</th>
+                  <td>Rp. 175.000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-dismiss="modal"
+          >
+            KEMBALI
+          </button>
+          <button type="button" class="btn btn-primary">BELI</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div
+    class="modal fade"
+    id="produk6"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Detail Produk
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/produk/usb.jpg" />
+            </div>
+            <div class="col-md-6">
+              <table class="table table-borderless">
+                <tr>
+                  <th>Nama Produk</th>
+                  <td>USB Lightning</td>
+                </tr>
+                <tr>
+                  <th>Merk/Type</th>
+                  <td>Amazon/Panjang kabel 1 meter
+    
+                  </td>
+                </tr>
+                <tr>
+                  <th>Biaya Ongkir</th>
+                  <td>Gratis</td>
+                </tr>
+                <tr>
+                  <th>Rating Produk</th>
+                  <td>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star-half-alt text-success"></i>
+                    <i class="far fa-star text-success"></i><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Stock Produk</th>
+                  <td>88 Pcs</td>
+                </tr>
+                <tr>
+                  <th>Harga</th>
+                  <td>Rp. 50.000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-dismiss="modal"
+          >
+            KEMBALI
+          </button>
+          <button type="button" class="btn btn-primary">BELI</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div
+    class="modal fade"
+    id="produk7"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Detail Produk
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/produk/ssd.jpg" />
+            </div>
+            <div class="col-md-6">
+              <table class="table table-borderless">
+                <tr>
+                  <th>Nama Produk</th>
+                  <td>SSD Sansung</td>
+                </tr>
+                <tr>
+                  <th>Merk/Type</th>
+                  <td>Samsung/Kapasitas penyimpanan 512GB
+    
+                  </td>
+                </tr>
+                <tr>
+                  <th>Biaya Ongkir</th>
+                  <td>Gratis</td>
+                </tr>
+                <tr>
+                  <th>Rating Produk</th>
+                  <td>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="faS fa-star text-success"></i><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Stock Produk</th>
+                  <td>13 Pcs</td>
+                </tr>
+                <tr>
+                  <th>Harga</th>
+                  <td>Rp. 450.000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-dismiss="modal"
+          >
+            KEMBALI
+          </button>
+          <button type="button" class="btn btn-primary">BELI</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div
+    class="modal fade"
+    id="produk8"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Detail Produk
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/produk/tonner.jpg" />
+            </div>
+            <div class="col-md-6">
+              <table class="table table-borderless">
+                <tr>
+                  <th>Nama Produk</th>
+                  <td>AVOSKIN Tonner</td>
+                </tr>
+                <tr>
+                  <th>Merk/Type</th>
+                  <td>AVOSKIN/Miraculous Refining Toner 20ml
+    
+                  </td>
+                </tr>
+                <tr>
+                  <th>Biaya Ongkir</th>
+                  <td>Gratis</td>
+                </tr>
+                <tr>
+                  <th>Rating Produk</th>
+                  <td>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="far fa-star text-success"></i><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Stock Produk</th>
+                  <td>27 Pcs</td>
+                </tr>
+                <tr>
+                  <th>Harga</th>
+                  <td>Rp. 84.550</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-dismiss="modal"
+          >
+            KEMBALI
+          </button>
+          <button type="button" class="btn btn-primary">BELI</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="row mt-5 no-gutters">
+      <footer class="bg-dark text-white p-5">
+        <div class="row">
+          <div class="col-md-3">
+            
+            <h5>LAYANAN PELANGGAN</h5>
+            <ul>
+              <li>Pusat Bantuan</li>
+              <li>Panduan Pembelian</li>
+              <li>Panduan Pembayaran</li>
+              <li>Pengiriman</li>
+              <li>Panduan Pengembalian</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>TENTANG KAMI</h5>
+            <p>
+              Arya Store merupakan salah satu toko online terbesar di Jakarta. Arya
+              Store menawarkan harga yang kompetitif dari sejumlah produk dalam
+              kategori yang berbeda. GRATIS BIAYA KIRIM ke-Seluruh Indonesia!
+            </p>
+          </div>
+          <div class="col-md-2">
+            <h5>PEMBAYARAN</h5>
+              <img src="img/pembayaran/payment.jpg" width="200px" class="d-block w-100">
+          </div>
+          <div class="col-md-2">
+            <h5>PENGIRIMAN</h5>
+            <ul>
+              <li>GOJEK</li>
+              <li>GRAB</li>
+              <li>JNE</li>
+              <li>JNT</li>
+              <li>TIKI</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5>HUBUNGI KAMI</h5>
+            <p>
+              (021) 123-456-789
+              customer@aryastore.com
+            <p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="copyright text-center font-weight-bold bg-warning p-2">
+      <p>
+        Developed by : I Gede Arya Danny Pratama <br>
+        Copyright <i class="far fa-copyright"></i> 2021
+      </p>
+    </div>
+    <script>
+      $(function() {
+       $('[data-toggle="tooltip"]').tooltip()
+      })
+     </script>     
+  </body>
+</html>
